@@ -1,10 +1,17 @@
 language: perl
 sudo: false
 
+addons:
+  apt:
+    packages:
+      - nettle-dev
+
 install:
   - perlbrew list
   - dzil authordeps --missing | cpanm -n
   - dzil listdeps   --missing | cpanm -n
+  - cpanm -n App::af
+  - af missing | cpanm -n
 
 perl:
   - "5.14"
