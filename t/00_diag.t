@@ -15,7 +15,6 @@ $modules{$_} = $_ for qw(
   Alien::Build::MM
   ExtUtils::MakeMaker
   Test::More
-  YAML
 );
 
 $post_diag = sub {

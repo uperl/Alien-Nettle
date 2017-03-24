@@ -2,8 +2,6 @@ use alienfile;
 
 plugin 'PkgConfig' => 'nettle';
 
-configure { requires 'Alien::Build' };
-
 share {
 
   plugin Download => (
