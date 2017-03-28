@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Documentation
 
 0.02      2017-03-25 09:15:46 -0400
   - Fixed typo in class base name
