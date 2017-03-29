@@ -8,10 +8,10 @@ addons:
 
 install:
   - perlbrew list
+  - cpanm -n App::af
+  - af missing | cpanm
   - dzil authordeps --missing | cpanm -n
   - dzil listdeps   --missing | cpanm -n
-  - cpanm -n App::af
-  - af missing | cpanm -n
 
 perl:
   - "5.14"
@@ -25,5 +25,8 @@ script:
   - dzil test -v
 
 env:
-  - ALIEN_INSTALL_TYPE=share
-  - ALIEN_INSTALL_TYPE=system
+  global:
+    - ALIEN_BASE_NO_ABMB=1
+  matrix:
+    - ALIEN_INSTALL_TYPE=share
+    - ALIEN_INSTALL_TYPE=system
