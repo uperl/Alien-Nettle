@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Add Alien::m4 for share build
 
 0.03      2017-03-28 14:41:29 -0400
   - Documentation
